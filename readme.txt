@@ -1,7 +1,7 @@
 ﻿=== WP Custom REST API Generator ===
-Contributors: shaampk1, centangle
-Donate link:
-Tags: rest api, rest-api, rest, api, wp api, admin, json, custom fields, taxonomy
+Contributors: centangle, shaampk1
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YVZMWLU7UJEBU&currency_code=USD&source=url
+Tags: rest api, rest, api, wp api, admin, json, custom fields, taxonomy
 Requires at least: 4.7
 Tested up to: 5.0.1
 Stable tag: 1.0.1
@@ -43,6 +43,9 @@ Customize the WP Custom REST API Generator settings at the administration menu >
 2. Shows the selected meta information in REST API client
 
 == Changelog ==
+
+= 1.0.1 =
+* updated meta information
 
 = 1.0.0 =
 * Initial release
