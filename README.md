@@ -38,6 +38,9 @@ WP Custom REST API Generator is based on following third-party resources:
 
 ## Changelog
 
+### 1.0.2
+* Tested with the latest build
+
 ### 1.0.1
 * Updated meta information
 
