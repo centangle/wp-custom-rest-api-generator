@@ -11,11 +11,11 @@ function wpcrag_get_author_meta()
 
     $user_info = get_user_meta(get_the_author_meta('ID'));
 
-    $author_meta = (object) ['author_name' => implode($user_info[nickname]),
+    $author_meta = (object) ['author_name' => implode($user_info['nickname']),
 
-        'author_description' => implode($user_info[description]),
+        'author_description' => implode($user_info['description']),
 
-        'author_user_level' => (int) implode($user_info[wp_user_level]),
+        'author_user_level' => (int) implode($user_info['wp_user_level']),
 
         'author_avatar' => get_avatar_url(get_the_author_meta('ID')),
 
@@ -29,6 +29,7 @@ function wpcrag_get_author_meta()
 
 function wpcrag_get_featured_image()
 {
+    global $post;
 
     $featured_image = (object) ['size_thumbnail' => get_the_post_thumbnail_url($post->ID, 'thumbnail'),
 
@@ -40,7 +41,7 @@ function wpcrag_get_featured_image()
 
     ];
 
-    return $featured_image;
+    return $featured_image ? $featured_image : '';
 
 }
 
@@ -115,41 +116,43 @@ add_action('rest_api_init', function () {
             // retrives custom meta fields for each post of a post type currently in the loop
 
             $custom_field_keys = get_post_custom_keys($post_id);
+            
+            if ($custom_field_keys) {
+                foreach ($custom_field_keys as $key => $field_name) {
 
-            foreach ($custom_field_keys as $key => $field_name) {
+                    $valuet = trim($field_name);
 
-                $valuet = trim($field_name);
+                    if ('_' == $valuet[0]) {
 
-                if ('_' == $valuet{0}) {
+                        continue;
 
-                    continue;
+                    }
+
+                    // matches value in the db, if found then registers to Rest API
+
+                    $post_field_key = $post_type . '_' . $field_name;
+
+                    if (is_array($options) && array_key_exists($post_field_key, $options)) {
+
+                        register_rest_field($post_type,
+
+                            $field_name,
+
+                            array(
+
+                                'get_callback' => 'wpcrag_get_post_meta',
+
+                                'update_callback' => null,
+
+                                'schema' => null,
+
+                            )
+
+                        );
+
+                    }
 
                 }
-
-                // matches value in the db, if found then registers to Rest API
-
-                $post_field_key = $post_type . '_' . $field_name;
-
-                if (is_array($options) && array_key_exists($post_field_key, $options)) {
-
-                    register_rest_field($post_type,
-
-                        $field_name,
-
-                        array(
-
-                            'get_callback' => 'wpcrag_get_post_meta',
-
-                            'update_callback' => null,
-
-                            'schema' => null,
-
-                        )
-
-                    );
-
-                }
-
             }
 
         }

@@ -121,7 +121,7 @@ function wpcrag_callback_rest_api_fields($callback_args) {
 
                                         $valuet = trim($value);
 
-                                        if ('_' == $valuet{0}) {
+                                        if ('_' == $valuet[0]) {
 
                                             continue;
 

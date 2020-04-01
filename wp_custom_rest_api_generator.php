@@ -8,7 +8,7 @@ Plugin URI:  https://developer.wordpress.org/plugins/wp-custom-rest-api-generato
 
 Description:  Admin panel for enabling Author Meta, Featured Image, Custom Fields and Taxonomies for all available Post Types in WordPress Rest API
 
-Version:      1.0.2
+Version:      1.0.3
 
 Author:       Centangle Interactive
 
@@ -24,14 +24,14 @@ WP Custom REST API Generator is free software: you can redistribute it and/or mo
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
 any later version.
- 
+
 WP Custom REST API Generator is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
- 
+
 You should have received a copy of the GNU General Public License
-along with WP Custom REST API Generator. If not, see License URI: 
+along with WP Custom REST API Generator. If not, see License URI:
 https://www.gnu.org/licenses/gpl-2.0.html
 
  */
