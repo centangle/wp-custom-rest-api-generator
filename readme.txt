@@ -3,7 +3,7 @@ Contributors: centangle, shaampk1, sajjadhussain2509
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YVZMWLU7UJEBU&currency_code=USD&source=url
 Tags: rest api, rest, api, wp api, admin, json, custom fields, taxonomy
 Requires at least: 5.0
-Tested up to: 5.4
+Tested up to: 5.5.3
 Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
