@@ -8,7 +8,7 @@ Plugin URI:  https://developer.wordpress.org/plugins/wp-custom-rest-api-generato
 
 Description:  Admin panel for enabling Author Meta, Featured Image, Custom Fields and Taxonomies for all available Post Types in WordPress Rest API
 
-Version:      1.0.3
+Version:      1.0.4
 
 Author:       Centangle Interactive
 
