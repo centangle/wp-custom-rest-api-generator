@@ -11,18 +11,19 @@ function wpcrag_get_author_meta()
 
     $user_info = get_user_meta(get_the_author_meta('ID'));
 
-    $author_meta = (object) ['author_name' => implode($user_info['nickname']),
-
-        'author_description' => implode($user_info['description']),
-
-        'author_user_level' => (int) implode($user_info['wp_user_level']),
-
-        'author_avatar' => get_avatar_url(get_the_author_meta('ID')),
-
-    ];
-
-    return $author_meta;
-
+    if(! empty($user_info)) {
+        $author_meta = (object) ['author_name' => implode($user_info['nickname']),
+    
+            'author_description' => implode($user_info['description']),
+    
+            'author_user_level' => (int) implode($user_info['wp_user_level']),
+    
+            'author_avatar' => get_avatar_url(get_the_author_meta('ID')),
+    
+        ];
+    
+        return $author_meta;
+    }
 }
 
 // callback function for register_rest_api for featured_image

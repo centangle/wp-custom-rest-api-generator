@@ -3,8 +3,8 @@ Contributors: centangle, shaampk1, sajjadhussain2509
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YVZMWLU7UJEBU&currency_code=USD&source=url
 Tags: rest api, rest, api, wp api, admin, json, custom fields, taxonomy
 Requires at least: 5.0
-Tested up to: 5.8
-Stable tag: 1.0.4
+Tested up to: 5.9.2
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ Customize the WP Custom REST API Generator settings at the administration menu >
 2. Shows the selected meta information in REST API client
 
 == Changelog ==
+= 1.0.5 =
+* Tested with the latest build
+
 = 1.0.4 =
 * Tested with the latest build
 
